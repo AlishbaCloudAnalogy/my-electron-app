@@ -1,6 +1,8 @@
 {
   "name": "my-electron-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "My Electron app with auto-update",
+  "author": "AlishbaCloudAnalogy",
   "main": "main.js",
   "repository": {
     "type": "git",
