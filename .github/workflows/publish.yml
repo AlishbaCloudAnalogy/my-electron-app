@@ -30,6 +30,12 @@ jobs:
           node-version: 20
           cache: yarn
 
+      # yarn.lock resolves @electron/node-gyp over SSH; CI has no SSH key
+      - name: Prefer HTTPS for GitHub git deps
+        run: |
+          git config --global url."https://github.com/".insteadOf "ssh://git@github.com/"
+          git config --global url."https://github.com/".insteadOf "git@github.com:"
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
